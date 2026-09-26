@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOREX ACADEMY TJ — Курси таълимии Forex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0b0f19;
+            --bg-card: #131c2e;
+            --bg-card-hover: #1c2840;
+            --border-color: #1e293b;
+            --accent-green: #10b981;
+            --accent-green-glow: rgba(16, 185, 129, 0.2);
+            --accent-blue: #3b82f6;
+            --accent-blue-glow: rgba(59, 130, 246, 0.2);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --danger: #ef4444;
+            --danger-bg: rgba(239, 68, 68, 0.15);
+            --warning: #f59e0b;
+            --warning-bg: rgba(245, 158, 11, 0.12);
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* HEADER & NAVBAR */
+        header {
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-logo span {
+            color: var(--accent-green);
+        }
+
+        .founder-badge {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--accent-blue);
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            padding: 32px 0 24px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 16px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .founder-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .founder-tag strong {
+            color: var(--accent-green);
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: var(--radius-md);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px var(--accent-green-glow);
+            transition: var(--transition);
+            text-decoration: none;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
+        }
+
+        .cta-btn:active {
+            transform: translateY(0);
+        }
+
+        /* WARNING DISCLAIMER BOX */
+        .warning-card {
+            background: var(--warning-bg);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            margin: 24px 0;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .warning-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .warning-content h4 {
+            color: var(--warning);
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .warning-content p {
+            color: #e2e8f0;
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        /* PROGRESS SECTION */
+        .progress-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 18px 20px;
+            margin-bottom: 28px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .progress-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .progress-val {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--accent-green);
+        }
+
+        .progress-bar-bg {
+            background: rgba(255, 255, 255, 0.08);
+            height: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-green) 100%);
+            width: 0%;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 10px;
+        }
+
+        .progress-subtext {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .btn-reset {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-decoration: underline;
+            padding: 2px 4px;
+            transition: var(--transition);
+        }
+
+        .btn-reset:hover {
+            color: var(--danger);
+        }
+
+        /* LESSONS GRID */
+        .section-heading {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 640px) {
+            .lessons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .lesson-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lesson-card.unlocked:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(16, 185, 129, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .lesson-card.locked {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background: rgba(19, 28, 46, 0.5);
+        }
+
+        .lesson-card.completed {
+            border-color: rgba(16, 185, 129, 0.5);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .lesson-info {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .lesson-num {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            color: var(--accent-blue);
+        }
+
+        .lesson-card.completed .lesson-num {
+            background: var(--accent-green);
+            color: #fff;
+        }
+
+        .lesson-title-text {
+            font-weight: 700;
+            font-size: 0.98rem;
+            color: var(--text-main);
+        }
+
+        .lesson-status {
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .status-open {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .status-completed {
+            background: rgba(16, 185, 129, 0.25);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .status-locked {
+            background: rgba(148, 163, 184, 0.1);
+            color: var(--text-muted);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        /* VIEW MODAL & VIEWS */
+        .view-screen {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .view-screen.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .back-nav:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .lesson-detail-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin-bottom: 28px;
+        }
+
+        .lesson-header-badge {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-blue);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .lesson-detail-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .lesson-body {
+            font-size: 1rem;
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .lesson-body p {
+            margin-bottom: 16px;
+        }
+
+        .lesson-body ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+        }
+
+        .lesson-body li {
+            margin-bottom: 8px;
+        }
+
+        .visual-box {
+            background: rgba(11, 15, 25, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .visual-box svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid var(--accent-blue);
+            padding: 14px 18px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 18px 0;
+            font-size: 0.95rem;
+        }
+
+        /* QUIZ SECTION */
+        .quiz-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .question-card {
+            background: rgba(11, 15, 25, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            margin-bottom: 20px;
+        }
+
+        .question-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: #fff;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .option-btn:hover:not(.disabled) {
+            border-color: var(--accent-blue);
+            background: var(--bg-card-hover);
+        }
+
+        .option-btn.selected-correct {
+            background: rgba(16, 185, 129, 0.2) !important;
+            border-color: var(--accent-green) !important;
+            color: #34d399 !important;
+            font-weight: 700;
+        }
+
+        .option-btn.selected-wrong {
+            background: var(--danger-bg) !important;
+            border-color: var(--danger) !important;
+            color: #f87171 !important;
+            font-weight: 700;
+        }
+
+        .option-btn.disabled {
+            cursor: default;
+        }
+
+        .feedback-badge {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 8px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .feedback-badge.correct {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+        }
+
+        .feedback-badge.wrong {
+            display: inline-block;
+            background: var(--danger-bg);
+            color: #f87171;
+        }
+
+        /* QUIZ RESULT BOX */
+        .quiz-result-box {
+            display: none;
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(11, 15, 25, 0.8);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            margin-top: 20px;
+        }
+
+        .result-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .result-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .result-score {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .result-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .btn-pass {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 4px 15px var(--accent-green-glow);
+        }
+
+        .btn-retry {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid var(--danger);
+            color: #f87171;
+        }
+
+        .btn-retry:hover {
+            background: var(--danger);
+            color: white;
+        }
+
+        /* FINAL SCREEN */
+        .final-screen {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--accent-green);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+            margin-bottom: 40px;
+        }
+
+        .trophy-icon {
+            font-size: 4.5rem;
+            margin-bottom: 16px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .final-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            margin-bottom: 10px;
+        }
+
+        .final-desc {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 24px;
+        }
+
+        .final-founder-card {
+            background: rgba(11, 15, 25, 0.6);
+            border: 1px solid var(--border-color);
+            padding: 16px;
+            border-radius: var(--radius-md);
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        .final-founder-card h3 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .final-founder-card p {
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: auto;
+            border-top: 1px solid var(--border-color);
+            padding: 24px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            background: rgba(11, 15, 25, 0.9);
+        }
+
+        footer p {
+            margin-bottom: 4px;
+        }
+
+        /* CONFETTI CANVAS */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* DIALOG MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 16px;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .modal-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .modal-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .modal-actions button {
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-confirm {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-cancel {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="brand-logo" onclick="showView('home-view'); return false;">
+                📈 FOREX <span>ACADEMY TJ</span>
+            </a>
+            <div class="founder-badge">
+                JABORZODA FAYZALI
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="container" style="padding-top: 16px; padding-bottom: 40px; flex: 1;">
+
+        <!-- MAIN HOME VIEW -->
+        <div id="home-view" class="view-screen active">
+
+            <section class="hero-section">
+                <h1 class="hero-title">Forex-ро аз сифр омӯз.</h1>
+                <p class="hero-subtitle">Курси интерактивӣ бо забони тоҷикӣ — қадам ба қадам, бо тестҳо.</p>
+                <div class="founder-tag">
+                    Асосгузор: <strong>JABORZODA FAYZALI</strong>
+                </div>
+                <div>
+                    <button class="cta-btn" onclick="startOrContinueCourse()">
+                        🚀 Оғози омӯзиш
+                    </button>
+                </div>
+            </section>
+
+            <!-- WARNING DISCLAIMER -->
+            <div class="warning-card">
+                <div class="warning-icon">⚠️</div>
+                <div class="warning-content">
+                    <h4>Муҳим</h4>
+                    <p>Forex дорои хавфи молиявӣ мебошад. Ин курс танҳо барои омӯзиш аст ва фоидаи кафолатнок пешниҳод намекунад. Пеш аз истифодаи маблағи воқеӣ, дар ҳисоби demo машқ кунед.</p>
+                </div>
+            </div>
+
+            <!-- PROGRESS CARD -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <span class="progress-title">Пешрафти курс</span>
+                    <span class="progress-val" id="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-subtext">
+                    <span id="progress-count">0 аз 7 дарс анҷом ёфт</span>
+                    <button class="btn-reset" onclick="confirmResetProgress()">Аз нав оғоз кардан</button>
+                </div>
+            </div>
+
+            <!-- FINAL TROPHY SCREEN (WHEN ALL COMPLETED) -->
+            <div id="final-trophy-banner" class="final-screen" style="display: none;">
+                <div class="trophy-icon">🏆</div>
+                <h2 class="final-title">Курс анҷом ёфт!</h2>
+                <p class="final-desc">Ту ҳамаи 7 дарс ва 35 саволро бомуваффақият гузаштӣ.</p>
+                <div class="final-founder-card">
+                    <h3>FOREX ACADEMY TJ</h3>
+                    <p>Асосгузор: JABORZODA FAYZALI</p>
+                </div>
+            </div>
+
+            <!-- LESSONS LIST -->
+            <h3 class="section-heading">📚 Дарсҳои курс</h3>
+            <div class="lessons-grid" id="lessons-grid">
+                <!-- Lesson cards will be populated dynamically -->
+            </div>
+
+        </div>
+
+        <!-- LESSON & QUIZ VIEW -->
+        <div id="lesson-view" class="view-screen">
+            <button class="back-nav" onclick="showView('home-view')">
+                ← Бозгашт ба асосӣ
+            </button>
+
+            <!-- LESSON DETAIL CARD -->
+            <div class="lesson-detail-card">
+                <div class="lesson-header-badge" id="lesson-view-num">ДАРСИ 1</div>
+                <h2 class="lesson-detail-title" id="lesson-view-title">Название урока</h2>
+                <div class="lesson-body" id="lesson-view-content">
+                    <!-- Lesson HTML Content -->
+                </div>
+            </div>
+
+            <!-- QUIZ CONTAINER -->
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="quiz-title">
+                        <span>📝</span> Тест — 5 савол
+                    </div>
+                    <div style="font-size: 0.85rem; color: var(--text-muted);" id="quiz-requirement-hint">
+                        Ҳадди ақал 4/5 ҷавоби дуруст
+                    </div>
+                </div>
+
+                <div id="quiz-questions-list">
+                    <!-- Questions generated here -->
+                </div>
+
+                <div class="quiz-result-box" id="quiz-result-box">
+                    <div class="result-icon" id="result-icon">🎉</div>
+                    <h3 class="result-title" id="result-title">Дарс гузашт!</h3>
+                    <div class="result-score" id="result-score">Натиҷа: 5 / 5</div>
+                    <button class="result-btn" id="result-action-btn" onclick="handleResultAction()">
+                        Қадами навбатӣ ➔
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- MODAL CONFIRMATION -->
+    <div class="modal-overlay" id="reset-modal">
+        <div class="modal-card">
+            <h3>Пок кардани пешрафт?</h3>
+            <p>Ҳамаи дарсҳои гузашташуда ва натиҷаҳои тестҳо тоза карда мешаванд.</p>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeResetModal()">Бекор кардан</button>
+                <button class="btn-confirm" onclick="executeResetProgress()">Ҳа, тоза кардан</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2026 JABORZODA FAYZALI • FOREX ACADEMY TJ</p>
+            <p style="font-size: 0.78rem; opacity: 0.7;">Educational project</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // COURSE DATA DEFINITION
+        const lessonsData = [
+            {
+                id: 1,
+                title: "Forex чист?",
+                icon: "📘",
+                content: `
+                    <p><strong>Forex</strong> — кӯтоҳшудаи <em>Foreign Exchange</em> (мубодилаи асъори хориҷӣ) мебошад. Ин бозории ҷаҳонии мубодилаи асъор аст, ки дар он бонки марказӣ, бонкҳои тиҷоратӣ ва трейдерҳо фаъолият мекунанд.</p>
+                    <p>Дар Forex асъорҳо одатан ҳамчун ҷуфт савдо мешаванд, масалан <strong>EUR/USD</strong>.</p>
+                    <div class="highlight-box">
+                        <strong>Мисол:</strong> Агар нархи <code>EUR/USD = 1.1000</code> бошад, ин маънои онро дорад: <br>
+                        <strong>1 EUR = 1.10 USD</strong> (Барои харидани 1 Евро, 1.10 Доллар лозим аст).
+                    </div>
+                    <p>Дар бозори Forex ду самти асосии савдо мавҷуд аст:</p>
+                    <ul>
+                        <li><strong>BUY (Харид)</strong> — вақте кушода мешавад, ки шумо интизори болоравии нархи асъор ҳастед.</li>
+                        <li><strong>SELL (Фурӯш)</strong> — вақте кушода мешавад, ки шумо интизори пастшавии нархи асъор ҳастед.</li>
+                    </ul>
+                    <div class="visual-box">
+                        <svg viewBox="0 0 400 120" width="100%" height="120">
+                            <rect width="400" height="120" fill="#0f172a" rx="8"/>
+                            <path d="M 30 80 Q 100 20, 200 70 T 370 30" fill="none" stroke="#10b981" stroke-width="4"/>
+                            <circle cx="370" cy="30" r="6" fill="#10b981"/>
+                            <text x="40" y="40" fill="#94a3b8" font-size="12">EUR/USD = 1.1000</text>
+                            <text x="280" y="100" fill="#34d399" font-weight="bold" font-size="14">BUY 🟢 (Болоравӣ)</text>
+                        </svg>
+                    </div>
+                `,
+                questions: [
+                    {
+                        q: "Forex чист?",
+                        options: ["Бозори мубодилаи асъор", "Бозори телефон", "Бозори мошин", "Бонки маҳаллӣ"],
+                        correct: 0
+                    },
+                    {
+                        q: "EUR/USD чӣ нишон медиҳад?",
+                        options: ["Таносуби евро ба доллар", "Таносуби доллар ба рубл", "Нархи тилло", "Нархи нафт"],
+                        correct: 0
+                    },
+                    {
+                        q: "BUY одатан чӣ маъно дорад?",
+                        options: ["Интизории болоравии нарх", "Интизории пастшавии нарх", "Бастани интернет", "Гирифтани кредит"],
+                        correct: 0
+                    },
+                    {
+                        q: "SELL одатан чӣ маъно дорад?",
+                        options: ["Интизории пастшавии нарх", "Интизории болоравии нарх", "Хариди саҳмия", "Пардохти андоз"],
+                        correct: 0
+                    },
+                    {
+                        q: "Forex фоидаи кафолатнок медиҳад?",
+                        options: ["Не", "Бале", "Ҳамеша 100%", "Танҳо шабона"],
+                        correct: 0
+                    }
+                ]
+            },
+            {
+                id: 2,
+                title: "Ҷуфти асъорӣ",
+                icon: "💱",
+                content: `
+                    <p>Дар Forex ҳама гуна савдо бо <strong>Ҷуфти асъорӣ (Currency Pair)</strong> амалӣ карда мешавад. Дар ҳар як ҷуфт ду асъор мавҷуд аст:</p>
+                    <ul>
+                        <li><strong>Base Currency (Асъори асосӣ):</strong> Асъори аввал (масалан, дар <code>EUR/USD</code>, асъори Base ин <strong>EUR</strong> аст).</li>
+                        <li><strong>Quote Currency (Асъори нархгузорӣ):</strong> Асъори дуюм (масалан, дар <code>EUR/USD</code>, асъори Quote ин <strong>USD</strong> аст).</li>
+                    </ul>
+                    <p>Агар <code>EUR/USD = 1.1000</code> бошад, ин тақрибан мегӯяд, ки 1 EUR ба 1.10 USD баробар аст.</p>
+                    <div class="highlight-box">
+                        <strong>Мафҳуми Pip (Пип):</strong><br>
+                        Pip — хурдтарин тағйирёбии нарх дар бозор мебошад. Барои бисёр ҷуфтҳои асъорӣ 1 pip ба рақами 4-уми баъди вергул рост меояд:<br>
+                        <code>1.1000 → 1.1001 = 1 pip</code>
+                    </div>
+                    <p>⚠️ <strong>Огоҳӣ:</strong> Барои ҷуфтҳое, ки бо Йенаи Ҷопонӣ (JPY) мебошанд (масалан, USD/JPY), рақами 2-юми баъди вергул 1 pip ҳисоб мешавад (масалан, 150.00 → 150.01).</p>
+                `,
+                questions: [
+                    {
+                        q: "Дар EUR/USD base кадом аст?",
+                        options: ["EUR", "USD", "JPY", "GBP"],
+                        correct: 0
+                    },
+                    {
+                        q: "Дар EUR/USD quote кадом аст?",
+                        options: ["USD", "EUR", "GBP", "CHF"],
+                        correct: 0
+                    },
+                    {
+                        q: "EUR/USD = 1.1000 тақрибан чӣ мегӯяд?",
+                        options: ["1 EUR = 1.10 USD", "1 USD = 1.10 EUR", "1 EUR = 110 USD", "1 USD = 110 EUR"],
+                        correct: 0
+                    },
+                    {
+                        q: "1.1000 → 1.1001 барои бисёр ҷуфтҳо чанд pip аст?",
+                        options: ["1 pip", "10 pip", "100 pip", "0 pip"],
+                        correct: 0
+                    },
+                    {
+                        q: "Кадомаш ҷуфти асъорист?",
+                        options: ["GBP/USD", "USD only", "EUR only", "Money"],
+                        correct: 0
+                    }
+                ]
+            },
+            {
+                id: 3,
+                title: "Шамъҳои японӣ",
+                icon: "🕯️",
+                content: `
+                    <p><strong>Шамъҳои японӣ (Candlesticks)</strong> маъмултарин усули нишон додани ҳаракати нарх дар график мебошанд. Ҳар як шамъ дар як фосилаи вақт (Timeframe) сохта мешавад.</p>
+                    <p>Ҳар як шамъ 4 арзиши асосиро (OHLC) нишон медиҳад:</p>
+                    <ul>
+                        <li><strong>Open:</strong> Нархи кушодашавӣ</li>
+                        <li><strong>High:</strong> Баландтарин нарх дар ин давра</li>
+                        <li><strong>Low:</strong> Пасттарин нарх дар ин давра</li>
+                        <li><strong>Close:</strong> Нархи басташавӣ</li>
+                    </ul>
+                    <p>Сохтори шамъ аз ду қисм иборат аст:</p>
+                    <ul>
+                        <li><strong>Body (Бадан):</strong> Қисми асосӣ байни Open ва Close.</li>
+                        <li><strong>Wick / Shadow (Соя):</strong> Хатҳои борик дар боло ва поён, ки High ва Low-ро нишон медиҳанд.</li>
+                    </ul>
+                    <div class="visual-box">
+                        <svg viewBox="0 0 300 160" width="100%" height="160">
+                            <!-- Bullish Candlestick -->
+                            <line x1="80" y1="20" x2="80" y2="140" stroke="#10b981" stroke-width="3"/>
+                            <rect x="60" y="50" width="40" height="60" fill="#10b981" rx="2"/>
+                            <text x="80" y="15" fill="#10b981" font-size="11" text-anchor="middle">High</text>
+                            <text x="80" y="155" fill="#10b981" font-size="11" text-anchor="middle">Low</text>
+                            <text x="110" y="60" fill="#94a3b8" font-size="10">Close</text>
+                            <text x="110" y="110" fill="#94a3b8" font-size="10">Open</text>
+                            
+                            <!-- Bearish Candlestick -->
+                            <line x1="220" y1="20" x2="220" y2="140" stroke="#ef4444" stroke-width="3"/>
+                            <rect x="200" y="50" width="40" height="60" fill="#ef4444" rx="2"/>
+                            <text x="220" y="15" fill="#ef4444" font-size="11" text-anchor="middle">High</text>
+                            <text x="220" y="155" fill="#ef4444" font-size="11" text-anchor="middle">Low</text>
+                            <text x="250" y="60" fill="#94a3b8" font-size="10">Open</text>
+                            <text x="250" y="110" fill="#94a3b8" font-size="10">Close</text>
+                        </svg>
+                    </div>
+                `,
+                questions: [
+                    {
+                        q: "OHLC чӣ маъно дорад?",
+                        options: ["Open, High, Low, Close", "Only High, Low", "Order, Hold, Long, Close", "Open, Long, Cash, Close"],
+                        correct: 0
+                    },
+                    {
+                        q: "Body чист?",
+                        options: ["Қисми асосии шамъ", "Нархномаи брокер", "Индикатор", "Spread"],
+                        correct: 0
+                    },
+                    {
+                        q: "Wick/Shadow чӣ нишон дода метавонад?",
+                        options: ["Диапазони ҳаракати нарх берун аз body", "Фақат комиссия", "Номи брокер", "Баланс"],
+                        correct: 0
+                    },
+                    {
+                        q: "Open чист?",
+                        options: ["Нархи кушодашавӣ", "Нархи басташавӣ", "Баландтарин нарх", "Пасттарин нарх"],
+                        correct: 0
+                    },
+                    {
+                        q: "Close чист?",
+                        options: ["Нархи басташавӣ", "Нархи кушодашавӣ", "Spread", "Margin"],
+                        correct: 0
+                    }
+                ]
+            },
+            {
+                id: 4,
+                title: "Тренд",
+                icon: "📈",
+                content: `
+                    <p><strong>Тренд (Trend)</strong> — ин самти умумии ҳаракати нарх дар бозор аст. Трейдерҳои касбӣ мегӯянд: <em>"Trend is your friend"</em> (Тренд дӯсти туст).</p>
+                    <p>Се ҳолати асосии бозор мавҷуд аст:</p>
+                    <ul>
+                        <li><strong>Uptrend (Тренди болоравӣ):</strong> Нарх пайваста қуллаҳои баландтар (Higher Highs) ва қаърҳои баландтар (Higher Lows) месозад.</li>
+                        <li><strong>Downtrend (Тренди пастравӣ):</strong> Нарх қуллаҳои пасттар (Lower Highs) ва қаърҳои пасттар (Lower Lows) месозад.</li>
+                        <li><strong>Sideways (Флэт / Ҳаракати уфуқӣ):</strong> Нарх дар байни як диапазон ҳаракат карда, самти дақиқ надорад.</li>
+                    </ul>
+                    <div class="highlight-box">
+                        <strong>Timeframe (Боздошти вақт):</strong> Масалан, дар графики 1-соата (H1) тренд метавонад болоравӣ бошад, аммо дар 5-дақиқа (M5) пастравӣ. Барои таҳлил ҳамеша timeframe-ро ба эътибор гиред.
+                    </div>
+                    <div class="visual-box">
+                        <svg viewBox="0 0 350 100" width="100%" height="100">
+                            <path d="M 20 80 L 70 40 L 120 60 L 180 20 L 230 45 L 310 10" fill="none" stroke="#10b981" stroke-width="3"/>
+                            <circle cx="70" cy="40" r="4" fill="#3b82f6"/>
+                            <circle cx="180" cy="20" r="4" fill="#3b82f6"/>
+                            <text x="180" y="15" fill="#3b82f6" font-size="10" text-anchor="middle">Higher High</text>
+                            <text x="250" y="80" fill="#10b981" font-weight="bold" font-size="12">UPTREND 📈</text>
+                        </svg>
+                    </div>
+                `,
+                questions: [
+                    {
+                        q: "Uptrend одатан чӣ дорад?",
+                        options: ["Higher highs ва higher lows", "Lower highs", "Фақат як нарх", "Ҳеҷ ҳаракат"],
+                        correct: 0
+                    },
+                    {
+                        q: "Downtrend одатан чӣ дорад?",
+                        options: ["Lower highs ва lower lows", "Higher highs", "Фақат sideways", "Фақат gap"],
+                        correct: 0
+                    },
+                    {
+                        q: "Sideways чист?",
+                        options: ["Ҳаракат дар диапазон", "Танҳо болоравӣ", "Танҳо пастравӣ", "Бозори баста"],
+                        correct: 0
+                    },
+                    {
+                        q: "Timeframe барои чӣ муҳим аст?",
+                        options: ["Барои дидани сохтори нарх дар миқёси вақт", "Барои зиёд кардани баланс", "Барои иваз кардани асъор", "Барои кушодани интернет"],
+                        correct: 0
+                    },
+                    {
+                        q: "Тренд кафолати идомаи ҳаракат аст?",
+                        options: ["Не", "Бале", "100%", "Ҳамеша"],
+                        correct: 0
+                    }
+                ]
+            },
+            {
+                id: 5,
+                title: "Support & Resistance",
+                icon: "🧱",
+                content: `
+                    <p><strong>Support (Дастгирӣ)</strong> ва <strong>Resistance (Муқовимат)</strong> яке аз асостарин мафҳумҳои таҳлили техникӣ мебошанд.</p>
+                    <ul>
+                        <li><strong>Support (Дастгирӣ):</strong> Минтақаест дар поёни нарх, ки дар гузашта харидорон пеши роҳи афтидани нархро гирифтаанд ва нарх боло рафтааст.</li>
+                        <li><strong>Resistance (Муқовимат):</strong> Минтақаест дар болои нарх, ки дар гузашта фурӯшандагон пеши роҳи болоравии нархро гирифтаанд.</li>
+                    </ul>
+                    <div class="highlight-box">
+                        💡 <strong>Қоидаи муҳим:</strong> Support ва Resistance-ро ҳамчун <strong>ZONE (минтақа)</strong> қабул кунед, на ҳамчун хати дақиқи як-рақамӣ!
+                    </div>
+                    <p><strong>Breakout (Шикаст):</strong> Вақте нарх бо нерӯи баланд сатҳи Resistance ё Support-ро мешиканад ва ба он тараф идома медиҳад.</p>
+                    <div class="visual-box">
+                        <svg viewBox="0 0 350 120" width="100%" height="120">
+                            <rect x="20" y="20" width="310" height="15" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" stroke-dasharray="4"/>
+                            <text x="30" y="32" fill="#ef4444" font-size="10" font-weight="bold">RESISTANCE ZONE</text>
+                            
+                            <rect x="20" y="85" width="310" height="15" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-dasharray="4"/>
+                            <text x="30" y="97" fill="#10b981" font-size="10" font-weight="bold">SUPPORT ZONE</text>
+                            
+                            <path d="M 40 85 L 80 35 L 120 85 L 160 35 L 200 85" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                `,
+                questions: [
+                    {
+                        q: "Support чист?",
+                        options: ["Минтақаи эҳтимолии дастгирии нарх", "Фақат индикатор", "Комиссия", "Ҳисоби demo"],
+                        correct: 0
+                    },
+                    {
+                        q: "Resistance чист?",
+                        options: ["Минтақаи эҳтимолии муқовимати нарх", "Нархи хариди телефон", "Margin", "Balance"],
+                        correct: 0
+                    },
+                    {
+                        q: "Support/Resistance беҳтар чӣ гуна дида мешавад?",
+                        options: ["Ҳамчун zone", "Ҳамчун як рақами ҳатмӣ", "Ҳамчун парол", "Ҳамчун брокер"],
+                        correct: 0
+                    },
+                    {
+                        q: "Breakout чист?",
+                        options: ["Гузаштани нарх аз минтақаи муҳим", "Бастани график", "Пардохти комиссия", "Иваз кардани асъор"],
+                        correct: 0
+                    },
+                    {
+                        q: "Support ҳамеша нигоҳ медорад?",
+                        options: ["Не", "Бале", "100%", "Фақат рӯзона"],
+                        correct: 0
+                    }
+                ]
+            },
+            {
+                id: 6,
+                title: "BUY / SELL + SL / TP",
+                icon: "🟢",
+                content: `
+                    <p>Дар ҳар як савдо се нуқтаи асосӣ вуҷуд дорад:</p>
+                    <ul>
+                        <li><strong>Entry (Нуқтаи воридшавӣ):</strong> Нархе, ки шумо дар он савдоро мекушоед.</li>
+                        <li><strong>Stop Loss (SL):</strong> Аломати ба таври автоматикӣ бастани савдо барои маҳдуд кардани зарар (агар нарх бар зидди шумо равад).</li>
+                        <li><strong>Take Profit (TP):</strong> Аломати автоматикӣ бастани савдо ва гирифтани фоида (вақте нарх ба ҳадафи шумо мерасад).</li>
+                    </ul>
+                    <div class="highlight-box">
+                        <strong>Мисоли таълимӣ:</strong><br>
+                        Шумо савдои BUY мекушоед:<br>
+                        • Entry = <code>1.1000</code><br>
+                        • SL = <code>1.0950</code> (Зарари максималӣ: 50 pip)<br>
+                        • TP = <code>1.1100</code> (Фоидаи пешбинӣ: 100 pip)<br>
+                        <small style="color:var(--warning); display:block; margin-top:6px;">⚠️ Ин сигнали савдо нест — танҳо мисоли таълимӣ мебошад.</small>
+                    </div>
+                    <div class="visual-box">
+                        <svg viewBox="0 0 320 110" width="100%" height="110">
+                            <line x1="30" y1="20" x2="290" y2="20" stroke="#10b981" stroke-width="2" stroke-dasharray="3"/>
+                            <text x="35" y="15" fill="#10b981" font-size="10" font-weight="bold">Take Profit (TP) = 1.1100</text>
+                            
+                            <line x1="30" y1="55" x2="290" y2="55" stroke="#3b82f6" stroke-width="2"/>
+                            <text x="35" y="50" fill="#3b82f6" font-size="10" font-weight="bold">Entry = 1.1000</text>
+                            
+                            <line x1="30" y1="90" x2="290" y2="90" stroke="#ef4444" stroke-width="2" stroke-dasharray="3"/>
+                            <text x="35" y="85" fill="#ef4444" font-size="10" font-weight="bold">Stop Loss (SL) = 1.0950</text>
+                        </svg>
+                    </div>
+                `,
+                questions: [
+                    {
+                        q: "Entry чист?",
+                        options: ["Нуқтаи воридшавӣ", "Комиссия", "Номи брокер", "Balance"],
+                        correct: 0
+                    },
+                    {
+                        q: "Stop Loss барои чӣ аст?",
+                        options: ["Маҳдуд кардани зарар", "Кафолати фоида", "Зиёд кардани leverage", "Иваз кардани асъор"],
+                        correct: 0
+                    },
+                    {
+                        q: "Take Profit барои чӣ аст?",
+                        options: ["Муайян кардани ҳадафи гирифтани фоида", "Кафолати 100%", "Пардохти андоз", "Кушодани ҳисоб"],
+                        correct: 0
+                    },
+                    {
+                        q: "Мисоли Entry 1.1000 ва SL 1.0950 барои чӣ дода шудааст?",
+                        options: ["Барои омӯзиши мафҳум", "Ҳамчун сигнали ҳатмӣ", "Барои кафолати фоида", "Барои гирифтани кредит"],
+                        correct: 0
+                    },
+                    {
+                        q: "Оё SL/TP фоидаро кафолат медиҳанд?",
+                        options: ["Не", "Бале", "Ҳамеша", "Фақат дар EUR/USD"],
+                        correct: 0
+                    }
+                ]
+            },
+            {
+                id: 7,
+                title: "Risk Management",
+                icon: "🛡️",
+                content: `
+                    <p><strong>Risk Management (Идоракунии хавф)</strong> — муҳимтарин қисми роҳи ҳар як трейдер аст. Бидуни идоракунии хавф, ҳатто беҳтарин стратегияҳо ба муфлисшавӣ меоранд.</p>
+                    <p>Қоидаҳои тиллоии Risk Management:</p>
+                    <ul>
+                        <li><strong>Ба цел муфлис нашавед:</strong> Дар як савдо ҳеҷ гоҳ аз 1% ё 2%-и цели умумии депозитатон бештар хавф накунед.</li>
+                        <li><strong>Ҳамеша Stop Loss гузоред:</strong> Ҳеҷ гоҳ савдоро бе Stop Loss накушоед.</li>
+                        <li><strong>Leverage (Фишанг):</strong> Leverage имкон медиҳад бо пули камтар савдо кунед, аммо он ҳам фоида ва ҳам <em>зарарро чанд баробар зиёд мекунад</em>!</li>
+                        <li><strong>Эмоцияро идора кунед:</strong> Аз рӯи ғазаб ё тарси аз даст додани имконият (FOMO) савдо кушоед.</li>
+                        <li><strong>Аввал дар Demo Account:</strong> То он даме, ки дар ҳисоби демо ба натиҷа нарасед, пули воқеиро истифода набаред.</li>
+                    </ul>
+                `,
+                questions: [
+                    {
+                        q: "Risk Management чист?",
+                        options: ["Идоракунии хавфи савдо", "Номи платформа", "Индикатор", "Асъор"],
+                        correct: 0
+                    },
+                    {
+                        q: "Оё тамоми капиталро ба як савдо гузоштан дуруст аст?",
+                        options: ["Не", "Бале", "Ҳамеша", "Фақат бо leverage"],
+                        correct: 0
+                    },
+                    {
+                        q: "Stop Loss дар risk management чӣ нақш дорад?",
+                        options: ["Кӯмак ба маҳдуд кардани зарар", "Кафолати фоида", "Зиёд кардани баланс", "Паст кардани spread"],
+                        correct: 0
+                    },
+                    {
+                        q: "Demo account барои чӣ муфид аст?",
+                        options: ["Барои машқ бе истифодаи маблағи воқеӣ", "Барои гирифтани қарз", "Барои кафолати фоида", "Барои бекор кардани риск"],
+                        correct: 0
+                    },
+                    {
+                        q: "Натиҷаи гузашта фоидаи ояндаро кафолат медиҳад?",
+                        options: ["Не", "Бале", "100%", "Ҳамеша"],
+                        correct: 0
+                    }
+                ]
+            }
+        ];
+
+        // LOCAL STORAGE STATE
+        let userProgress = {
+            completedLessons: [], // list of lesson IDs completed
+            unlockedLesson: 1     // highest unlocked lesson ID
+        };
+
+        let currentActiveLesson = null;
+        let userAnswers = {}; // stores selected index per question index
+
+        // INITIALIZATION
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProgress();
+            renderLessonsGrid();
+            updateProgressBar();
+        });
+
+        // LOAD FROM LOCAL STORAGE
+        function loadProgress() {
+            const saved = localStorage.getItem('forex_academy_tj_progress');
+            if (saved) {
+                try {
+                    userProgress = JSON.parse(saved);
+                } catch(e) {
+                    userProgress = { completedLessons: [], unlockedLesson: 1 };
+                }
+            }
+        }
+
+        // SAVE TO LOCAL STORAGE
+        function saveProgress() {
+            localStorage.setItem('forex_academy_tj_progress', JSON.stringify(userProgress));
+        }
+
+        // RENDER HOME LESSONS GRID
+        function renderLessonsGrid() {
+            const grid = document.getElementById('lessons-grid');
+            grid.innerHTML = '';
+
+            lessonsData.forEach((lesson) => {
+                const isCompleted = userProgress.completedLessons.includes(lesson.id);
+                const isUnlocked = lesson.id <= userProgress.unlockedLesson;
+
+                const card = document.createElement('div');
+                card.className = `lesson-card ${isCompleted ? 'completed' : ''} ${isUnlocked ? 'unlocked' : 'locked'}`;
+                
+                let statusBadge = '';
+                if (isCompleted) {
+                    statusBadge = `<span class="lesson-status status-completed">✅ Анҷом ёфт</span>`;
+                } else if (isUnlocked) {
+                    statusBadge = `<span class="lesson-status status-open">Кушода</span>`;
+                } else {
+                    statusBadge = `<span class="lesson-status status-locked">🔒 Қулф</span>`;
+                }
+
+                card.innerHTML = `
+                    <div class="lesson-info">
+                        <div class="lesson-num">${lesson.id}</div>
+                        <div>
+                            <div class="lesson-title-text">${lesson.icon} ${lesson.title}</div>
+                        </div>
+                    </div>
+                    ${statusBadge}
+                `;
+
+                if (isUnlocked) {
+                    card.onclick = () => openLesson(lesson.id);
+                } else {
+                    card.onclick = () => {
+                        alert("Ин дарс қулф аст. Аввал дарсҳои қаблиро бомуваффақият гузаред!");
+                    };
+                }
+
+                grid.appendChild(card);
+            });
+        }
+
+        // UPDATE PROGRESS BAR
+        function updateProgressBar() {
+            const count = userProgress.completedLessons.length;
+            const percent = Math.round((count / lessonsData.length) * 100);
+
+            document.getElementById('progress-percent').innerText = `${percent}%`;
+            document.getElementById('progress-fill').style.width = `${percent}%`;
+            document.getElementById('progress-count').innerText = `${count} аз ${lessonsData.length} дарс анҷом ёфт`;
+
+            const trophyBanner = document.getElementById('final-trophy-banner');
+            if (count === lessonsData.length) {
+                trophyBanner.style.display = 'block';
+                triggerConfetti();
+            } else {
+                trophyBanner.style.display = 'none';
+            }
+        }
+
+        // START OR CONTINUE COURSE
+        function startOrContinueCourse() {
+            let targetId = userProgress.unlockedLesson;
+            if (targetId > lessonsData.length) targetId = lessonsData.length;
+            openLesson(targetId);
+        }
+
+        // OPEN LESSON VIEW
+        function openLesson(lessonId) {
+            currentActiveLesson = lessonsData.find(l => l.id === lessonId);
+            if (!currentActiveLesson) return;
+
+            userAnswers = {};
+
+            document.getElementById('lesson-view-num').innerText = `ДАРСИ ${currentActiveLesson.id} АЗ ${lessonsData.length}`;
+            document.getElementById('lesson-view-title').innerText = `${currentActiveLesson.icon} ${currentActiveLesson.title}`;
+            document.getElementById('lesson-view-content').innerHTML = currentActiveLesson.content;
+
+            renderQuiz();
+
+            showView('lesson-view');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // RENDER QUIZ FOR CURRENT LESSON
+        function renderQuiz() {
+            const container = document.getElementById('quiz-questions-list');
+            const resultBox = document.getElementById('quiz-result-box');
+            container.innerHTML = '';
+            resultBox.style.display = 'none';
+
+            currentActiveLesson.questions.forEach((qObj, qIdx) => {
+                const qCard = document.createElement('div');
+                qCard.className = 'question-card';
+
+                let optionsHtml = '';
+                qObj.options.forEach((optText, optIdx) => {
+                    optionsHtml += `
+                        <button class="option-btn" id="opt-${qIdx}-${optIdx}" onclick="selectAnswer(${qIdx}, ${optIdx})">
+                            <span>${optText}</span>
+                            <span class="feedback-badge" id="badge-${qIdx}-${optIdx}"></span>
+                        </button>
+                    `;
+                });
+
+                qCard.innerHTML = `
+                    <div class="question-text">${qIdx + 1}. ${qObj.q}</div>
+                    <div class="options-list">
+                        ${optionsHtml}
+                    </div>
+                `;
+
+                container.appendChild(qCard);
+            });
+        }
+
+        // SELECT ANSWER HANDLER
+        function selectAnswer(qIdx, optIdx) {
+            // If already answered this question, ignore
+            if (userAnswers.hasOwnProperty(qIdx)) return;
+
+            userAnswers[qIdx] = optIdx;
+
+            const qObj = currentActiveLesson.questions[qIdx];
+            const isCorrect = (optIdx === qObj.correct);
+
+            // Disable options for this question
+            qObj.options.forEach((_, idx) => {
+                const btn = document.getElementById(`opt-${qIdx}-${idx}`);
+                btn.classList.add('disabled');
+            });
+
+            const selectedBtn = document.getElementById(`opt-${qIdx}-${optIdx}`);
+            const selectedBadge = document.getElementById(`badge-${qIdx}-${optIdx}`);
+
+            if (isCorrect) {
+                selectedBtn.classList.add('selected-correct');
+                selectedBadge.innerText = "✅ Ҷавоби дуруст!";
+                selectedBadge.className = "feedback-badge correct";
+            } else {
+                selectedBtn.classList.add('selected-wrong');
+                selectedBadge.innerText = "❌ Ҷавоби нодуруст";
+                selectedBadge.className = "feedback-badge wrong";
+
+                // Highlight correct option
+                const correctBtn = document.getElementById(`opt-${qIdx}-${qObj.correct}`);
+                const correctBadge = document.getElementById(`badge-${qIdx}-${qObj.correct}`);
+                correctBtn.classList.add('selected-correct');
+                correctBadge.innerText = "✅ Ҷавоби дуруст";
+                correctBadge.className = "feedback-badge correct";
+            }
+
+            // Check if all 5 questions answered
+            if (Object.keys(userAnswers).length === currentActiveLesson.questions.length) {
+                setTimeout(evaluateQuiz, 600);
+            }
+        }
+
+        // EVALUATE QUIZ RESULT
+        function evaluateQuiz() {
+            let correctCount = 0;
+            currentActiveLesson.questions.forEach((qObj, qIdx) => {
+                if (userAnswers[qIdx] === qObj.correct) {
+                    correctCount++;
+                }
+            });
+
+            const resultBox = document.getElementById('quiz-result-box');
+            const resultIcon = document.getElementById('result-icon');
+            const resultTitle = document.getElementById('result-title');
+            const resultScore = document.getElementById('result-score');
+            const resultActionBtn = document.getElementById('result-action-btn');
+
+            resultScore.innerText = `Натиҷа: ${correctCount} аз 5 ҷавоби дуруст`;
+            resultBox.style.display = 'block';
+
+            if (correctCount >= 4) {
+                // PASSED
+                resultIcon.innerText = "🎉";
+                resultTitle.innerText = "Дарс гузашт!";
+                resultTitle.style.color = "var(--accent-green)";
+
+                if (!userProgress.completedLessons.includes(currentActiveLesson.id)) {
+                    userProgress.completedLessons.push(currentActiveLesson.id);
+                }
+
+                if (currentActiveLesson.id + 1 > userProgress.unlockedLesson) {
+                    userProgress.unlockedLesson = currentActiveLesson.id + 1;
+                }
+
+                saveProgress();
+                renderLessonsGrid();
+                updateProgressBar();
+
+                if (currentActiveLesson.id < lessonsData.length) {
+                    resultActionBtn.innerText = "Дарси навбатӣ ➔";
+                    resultActionBtn.className = "result-btn btn-pass";
+                } else {
+                    resultActionBtn.innerText = "🏆 Намоиши натиҷаи охирин";
+                    resultActionBtn.className = "result-btn btn-pass";
+                }
+            } else {
+                // FAILED
+                resultIcon.innerText = "🔄";
+                resultTitle.innerText = "Барои гузаштан ҳадди ақал 4/5 лозим аст.";
+                resultTitle.style.color = "var(--danger)";
+
+                resultActionBtn.innerText = "🔄 Аз нав гузаштан";
+                resultActionBtn.className = "result-btn btn-retry";
+            }
+
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // RESULT ACTION BUTTON CLICK
+        function handleResultAction() {
+            let correctCount = 0;
+            currentActiveLesson.questions.forEach((qObj, qIdx) => {
+                if (userAnswers[qIdx] === qObj.correct) correctCount++;
+            });
+
+            if (correctCount >= 4) {
+                if (currentActiveLesson.id < lessonsData.length) {
+                    openLesson(currentActiveLesson.id + 1);
+                } else {
+                    showView('home-view');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            } else {
+                // Retry current lesson quiz
+                userAnswers = {};
+                renderQuiz();
+            }
+        }
+
+        // VIEW SWITCHER
+        function showView(viewId) {
+            document.querySelectorAll('.view-screen').forEach(el => el.classList.remove('active'));
+            document.getElementById(viewId).classList.add('active');
+        }
+
+        // RESET PROGRESS MODAL
+        function confirmResetProgress() {
+            document.getElementById('reset-modal').style.display = 'flex';
+        }
+
+        function closeResetModal() {
+            document.getElementById('reset-modal').style.display = 'none';
+        }
+
+        function executeResetProgress() {
+            userProgress = {
+                completedLessons: [],
+                unlockedLesson: 1
+            };
+            saveProgress();
+            renderLessonsGrid();
+            updateProgressBar();
+            closeResetModal();
+            showView('home-view');
+        }
+
+        // CONFETTI ANIMATION EFFECT
+        function triggerConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const colors = ['#10b981', '#3b82f6', '#f59e0b', '#ec4899', '#8b5cf6'];
+
+            for (let i = 0; i < 100; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height - canvas.height,
+                    size: Math.random() * 8 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    speedY: Math.random() * 3 + 2,
+                    speedX: Math.random() * 2 - 1,
+                    rotation: Math.random() * 360
+                });
+            }
+
+            let animationFrame;
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let stillActive = false;
+
+                particles.forEach(p => {
+                    p.y += p.speedY;
+                    p.x += p.speedX;
+                    p.rotation += 2;
+
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate((p.rotation * Math.PI) / 180);
+                    ctx.fillStyle = p.color;
+                    ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+                    ctx.restore();
+
+                    if (p.y < canvas.height) stillActive = true;
+                });
+
+                if (stillActive) {
+                    animationFrame = requestAnimationFrame(animate);
+                } else {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }
+            }
+
+            animate();
+        }
+    </script>
+</body>
+</html>
